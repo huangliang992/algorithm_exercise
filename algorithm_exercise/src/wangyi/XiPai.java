@@ -1,7 +1,7 @@
 package wangyi;
 
 import java.util.Scanner;
-
+//
 public class XiPai {
 	public static void main(String args[]){
 		Scanner in=new Scanner(System.in);

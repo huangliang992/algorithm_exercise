@@ -9,8 +9,11 @@ public class Solution {
 		 	n++;
 		 }
 		 ListNode ln=head;
+        if(k>n+1){
+            return null;
+        }
 		 for(int i=0;i<n+1-k;i++){
-			 ln=ln.next;
+			ln=ln.next;
 		 }
 		 return ln;
 	  }
@@ -23,5 +26,8 @@ public class Solution {
 		 Solution sl=new Solution();
 		 ListNode l=sl.FindKthToTail(ln, 2);
 		 System.out.println(l.val);
+		 ListNode ln1=new ListNode(100);
+		 ListNode l1=sl.FindKthToTail(ln1, 1);
+		 System.out.println(l1.val);
 	 }
 }

@@ -1,6 +1,7 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -12,13 +13,44 @@ import java.util.ArrayList;
  *
  */
 public class Path {
+	
+
+	public void ptGraphNode(UndirectedGraphNode node,ArrayList<UndirectedGraphNode> l){
+		if(judge(node,l)){
+			l.add(node);
+			System.out.println(node.label);
+			ArrayList<UndirectedGraphNode> gl=node.neighbors;
+			for(int i=0;i<gl.size();i++){
+				ptGraphNode(gl.get(i),l);
+			}
+		}
+	}
+	
+	public boolean judge(UndirectedGraphNode u,ArrayList<UndirectedGraphNode> l){
+		boolean tag=true;
+		for(int i=0;i<l.size();i++){
+			if(l.get(i)==u){
+				tag=false;
+				break;
+				}
+		}
+		return tag;
+	}
+	
 	public boolean checkPath(UndirectedGraphNode a, UndirectedGraphNode b) {
         // write code here
-		ArrayList<UndirectedGraphNode> list=a.neighbors;
-		if(a==b){
-			return true;
-		}else{
-			return false;
+		ArrayList<UndirectedGraphNode> l=new ArrayList<UndirectedGraphNode>();
+		ptGraphNode(a,l);
+		boolean flag=false;
+		for(int i=0;i<l.size();i++){
+			if(b==l.get(i)){
+				flag=true;
+				break;
+			}
 		}
+		return flag;
     }
+	public static void main(String args[]){
+	
+	}
 }

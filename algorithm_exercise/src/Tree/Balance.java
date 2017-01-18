@@ -11,12 +11,17 @@ public class Balance {
         // write code here
 		TreeNode right=root.right;
 		TreeNode left=root.left;
-		if(right.left!=null||right.right!=null&&left==null){
-			return false;
-		}else if(left.left!=null||left.right!=null&&right==null){
-			return false;
-		}else{
-			return isBalance(right)&&isBalance(left);
-		}
+		if(right==null){
+			if(left!=null){
+				if(left.right!=null||left.left!=null){
+					return false;
+				}else return true;
+			}else return true;
+		}else if(left==null){
+			if(right.right!=null||right.left!=null){
+				return false;
+				}else return true;
+		}else return isBalance(left)&&isBalance(right);
+		
     }
 }

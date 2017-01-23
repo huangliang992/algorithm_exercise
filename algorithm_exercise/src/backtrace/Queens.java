@@ -54,7 +54,7 @@ public class Queens {
 	
 	public static void main(String args[]){
 		Queens q=new Queens();
-		System.out.print(q.nQueens(5));
+		System.out.print(q.nQueens(11));
 		int a[]={5,2,0,6,4,0,0,0};
 		System.out.println(q.judge(a, 5, 7));
 	}

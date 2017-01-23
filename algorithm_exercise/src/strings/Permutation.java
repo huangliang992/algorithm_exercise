@@ -73,7 +73,7 @@ public class Permutation {
 	
 	public static void main(String args[]){
 		Permutation p=new Permutation();
-		ArrayList<String > list=p.getPermutation("EYUIDHFGEW");
+		ArrayList<String > list=p.getPermutation("EYUI");
 		for(int i=0;i<list.size();i++){
 			System.out.println(list.get(i));
 		}

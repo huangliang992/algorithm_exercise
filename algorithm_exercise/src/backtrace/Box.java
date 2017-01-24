@@ -6,7 +6,7 @@ package backtrace;
  * 来的所有箱子的高度之和。给定三个int数组w,l,h，分别表示每个箱子宽、长和高，同时给定箱子的数目n。
  * 请返回能堆成的最高的高度。保证n小于等于500。测试样例：[1,1,1],[1,1,1],[1,1,1]返回：1
  * @author hl
- *
+ *这种写法的复杂度为O(n^n)肯定是会超时的
  */
 public class Box {
 	
@@ -29,11 +29,11 @@ public class Box {
 					max=max+h[i];
 					m[t]=i;
 					get(w,l,h,n,t+1,max, m);
+					if(max>Max){
+						Max=max;
+					}
 					max=max-h[i];
 				}
-			}
-			if(max>Max){
-				Max=max;
 			}
 		}
 	}

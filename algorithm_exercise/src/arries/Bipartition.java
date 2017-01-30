@@ -1,7 +1,7 @@
 package arries;
 
 public class Bipartition {
-	//1111
+	//1111水均益
 	//两个正方形中心的连线
 	public double[] getBipartition(Point[] A, Point[] B) {
         // write code here

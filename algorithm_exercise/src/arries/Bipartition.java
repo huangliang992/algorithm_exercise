@@ -6,6 +6,7 @@ public class Bipartition {
 	public double[] getBipartition(Point[] A, Point[] B) {
         // write code here
 		//坐标不一定按顺时针，逆时针
+		//哎
 		Point [] A1=byShunshi(A);
 		Point [] B1=byShunshi(B);
 		double x1=(double) (A1[3].x-A1[0].x)/2+A1[0].x;

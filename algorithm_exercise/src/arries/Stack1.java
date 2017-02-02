@@ -1,5 +1,10 @@
 package arries;
 
+/**
+ * 不想敲代码水下经验
+ * @author hl
+ *
+ */
 public class Stack1 {
 	public int getHeight(int[][] actors, int n) {
         // write code here

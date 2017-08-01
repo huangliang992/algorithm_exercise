@@ -23,8 +23,7 @@ public class 异或运算 {
 					sb.append('1');
 				}
 			}
-		}
-		if(b.length()>a.length()){
+		}else if(b.length()>a.length()){
 			temp = a;
 			for(int i=0;i<b.length()-a.length(); i++){
 				temp = '0' + temp;
@@ -36,9 +35,15 @@ public class 异或运算 {
 					sb.append('1');
 				}
 			}
+		}else{
+			for(int i=0;i<a.length();i++){
+				if(a.charAt(i)==b.charAt(i)){
+					sb.append('0');
+				}else{
+					sb.append('1');
+				}
+			}
 		}
-		
-		
 		return sb.toString();
 	}
 	

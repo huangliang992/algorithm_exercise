@@ -1,0 +1,30 @@
+package utils;
+
+public class Òì»òÔËËã {
+	
+	public static String yihuo(String a, String b){
+		if(a.length()>b.length()){
+			for(int i=0;i<a.length()-b.length(); i++){
+				a = '0' + a;
+			}
+		}
+		if(b.length()>a.length()){
+			for(int i=0;i<b.length()-a.length(); i++){
+				b = '0' + b;
+			}
+		}
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<a.length();i++){
+			if(a.charAt(i)==b.charAt(i)){
+				sb.append('0');
+			}else{
+				sb.append('1');
+			}
+		}
+		return sb.toString();
+	}
+	
+	public static void main(String args[]){
+		System.out.println(yihuo("11101","000110011"));
+	}
+}

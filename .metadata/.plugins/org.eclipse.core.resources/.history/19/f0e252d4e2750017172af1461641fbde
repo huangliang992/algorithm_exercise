@@ -1,0 +1,36 @@
+package toutiao;
+
+import java.util.ArrayList;
+
+public class Main2 {
+	
+	public static void main(String args[]){
+		
+	}
+
+	public static int yihuo(int a, int b){
+		String str1 = tenTo2(a);
+		String str2 = tenTo2(b);
+		StringBuilder str3 = new StringBuilder();
+		for()
+	}
+	
+	/**
+	 * 10进制转2进制
+	 * @param a
+	 * @return
+	 */
+	public static String tenTo2(int a){
+		String result = "";
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		while(a!=0){
+			int k = a%2;
+			list.add(k);
+			a=a/2;
+		}
+		for(int i=list.size()-1;i>=0;i--){
+			result = result + list.get(i);
+		}
+		return result;
+	}
+}

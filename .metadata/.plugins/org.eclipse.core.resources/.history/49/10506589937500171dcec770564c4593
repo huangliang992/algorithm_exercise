@@ -1,0 +1,10 @@
+package math;
+
+public class ¸ùºÅ {
+
+	public static void main(String args[]){
+		int a = 9;
+		int b = (int) Math.sqrt(a);
+		System.out.println(b);
+	}
+}

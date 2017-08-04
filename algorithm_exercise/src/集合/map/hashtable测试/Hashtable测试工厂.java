@@ -1,4 +1,4 @@
-package 多线程;
+package 集合.map.hashtable测试;
 
 import java.util.Hashtable;
 import java.util.concurrent.ConcurrentHashMap;

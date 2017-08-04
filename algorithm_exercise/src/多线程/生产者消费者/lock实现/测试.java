@@ -8,7 +8,7 @@ public class 测试 {
 	public static void main(String args[]){
 		苹果 apple = new 苹果();
 		apple.setCount(0);
-		Lock lock = new ReentrantLock();
+		Lock lock = new ReentrantLock(false);
 		生产者   producer = new 生产者(lock, apple);
 		消费者   concummer = new 消费者(lock, apple);
 		for(int i=0;i<5;i++){

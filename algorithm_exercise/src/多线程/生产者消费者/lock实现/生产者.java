@@ -36,7 +36,7 @@ public class 生产者  implements Runnable{
 				return;
 			}
 		}
-		System.out.println(Thread.currentThread().getName()+"生产者不需要锁-"+apple.getCount());
+//		System.out.println(Thread.currentThread().getName()+"生产者不需要锁-"+apple.getCount());
 	}
 
 }

@@ -35,7 +35,7 @@ public class 消费者  implements Runnable{
 				return;
 			}
 		}
-		System.out.println(Thread.currentThread().getName()+"消费者不需要锁-"+apple.getCount());
+//		System.out.println(Thread.currentThread().getName()+"消费者不需要锁-"+apple.getCount());
 	}
 
 }

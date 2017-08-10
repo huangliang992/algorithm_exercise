@@ -91,10 +91,26 @@ public class 数学 {
     public static int minCommonMultiple(int m, int n) {  
         return m * n / maxCommonDivisor(m, n);  
     } 
+    
+    /**
+     * 获取n的所有的约数
+     * @param n
+     * @return
+     */
+    public static ArrayList<Integer> getYueshu(int n){
+    	ArrayList<Integer> list = new ArrayList<Integer>();
+    	for(int i=2;i<n;i++){
+    		if(n%i==0){
+    			list.add(i);
+    		}
+    	}
+    	return list;
+    }
+    
 	
 	public static void main(String args[]){
 		int a[] = {0,1,2,3,4};
-		List<Integer> list = reverse(a);
+		List<Integer> list = getLetterInANum(100);
 		for(int i=0;i<list.size();i++){
 			System.out.print(list.get(i)+" ");
 		}
